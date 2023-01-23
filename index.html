@@ -1,0 +1,64 @@
+<!DOCTYPE html5>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+
+<body>
+
+    <div class="container-contato">
+        <ul class="progressbar">
+            <li class="active" id="0">Nome</li>
+            <li id="1">E-mail</li>
+            <li id="2">CPF</li>
+            <li id="3">Data de Nascimento</li>
+            <li id="4" class="last">Escolher cartão</li>
+        </ul>
+        <div class="container-form">
+            <form id="formContato">
+                <div class="form-field fadeInRightContact active" id="0" >
+                    <h1>Olá, qual o seu nome</h1>
+                    <p>Será um prazer te conhecer</p>
+                    <input type="text" placeholder="Seu nome, por favor" name="nome" id="nome" oninput="this.value=this.value.replace(/[^aA-zZ.]/,'');">
+                    <div class="nav"><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="form-field fadeInRightContact" id="1">
+                    <h1><span id="nome-cliente"></span></h1>
+                    <p>Qual é o seu e-mail principal?</p>
+                    <input type="email" placeholder="Seu e-mail principal, por favor" name="email">
+                    <div class="nav"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i></div>
+                </div>
+                
+                <div class="form-field fadeInRightContact" id="2">
+                    <h1>Certo</h1>
+                    <p>Qual o seu CPF?</p>
+                    <input type="text" placeholder="CPF" name="cpf" id="cpf">
+                    <div class="nav"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="form-field fadeInRightContact" id="3">
+                    <h1>Certo</h1>
+                    <p>Qual a sua data de nascimento?</p>
+                    <input type="text" placeholder="Não vale mentir em 😂😂" name="data" id="data">
+                    <div class="nav"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i></div>
+                </div>
+
+                <div class="form-field fadeInRightContact last" id="4">
+                    <h1>Obrigado!</h1>
+                    <p>Agora vamos escolher o seu cartão</p>
+                    <i class="fas fa-check green-color"></i>
+                </div>
+            </form>
+        </div>
+</body>
+
+</html>
